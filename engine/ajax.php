@@ -152,4 +152,23 @@ if(isset($_POST["save_category_serial"]) && $_POST["save_category_serial"] == 'u
 
       echo json_encode($response);
 }
+
+// delete category
+if(isset($_POST["delete_category_serial"]) && $_POST["delete_category_serial"] == 'user_token'){
+      $id = $_POST['id'];
+      $args = "DELETE FROM categories WHERE id = '$id'";
+      $hapus = mysqli_query($dbconnect, $args);
+      if($hapus) {
+            $status = 1;
+            $message = "Successfully deleted data";
+      } else {
+            $status = 0;
+            $message = "Failed to delete data";
+      }
+      $response = [
+            "status"=> $status,
+            "message"=> $message
+      ];
+      echo json_encode($response);
+}
 ?>

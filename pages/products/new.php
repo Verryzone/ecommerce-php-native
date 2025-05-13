@@ -43,7 +43,7 @@
             <div class="col-md-6 col-lg-4 mb-3">
                   <div class="card h-100">
                         <div class="card-header h-75 d-flex align-items-center">
-                                    <img class="card-img-top" id="imagePreview" src="themes/assets/img/elements/2.jpg" alt="Card image cap" />
+                              <img class="card-img-top" id="imagePreview" src="assets/images/imgdefault.png" alt="Card image cap" />
                         </div>
                         <div class="card-body">
                               <h5 class="card-title">Product Image</h5>

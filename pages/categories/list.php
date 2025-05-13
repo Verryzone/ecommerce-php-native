@@ -101,8 +101,8 @@
                         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                             Cancel
                         </button>
-                        <input type="hidden" id="product_id_todelete" value="">
-                        <button type="button" class="btn btn-danger" onclick="deleteProduct()">Delete</button>
+                        <input type="hidden" id="id_todelete" value="">
+                        <button type="button" class="btn btn-danger" onclick="deleteCategory()">Delete</button>
                     </div>
                 </div>
             </div>

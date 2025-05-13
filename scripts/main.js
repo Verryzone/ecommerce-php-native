@@ -297,3 +297,34 @@ function saveCategory(request_ = 'new') {
       });
 
 }
+
+// delete category
+function deleteCategory() {
+      var id = $("#id_todelete").val();
+
+      var formData = new FormData();
+      formData.append('id', id);
+      formData.append('delete_category_serial', 'user_token');
+
+      $.ajax({
+            url: 'engine/ajax.php',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                  console.log(response);
+                  var data = JSON.parse(response);
+
+                  showNotification(data.status, data.message);
+                  if(data.status == 1) {
+                        setTimeout(function() {
+                              window.location.reload();
+                        }, 2000);
+                  }
+            },
+            error: function(xhr, status, error) {
+                  console.error('Error:', error);
+            }
+      });
+}
